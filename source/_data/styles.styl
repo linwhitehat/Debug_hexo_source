@@ -1,0 +1,299 @@
+// 站点名字体
+.site-title {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+// 站点子标题
+.site-subtitle{
+    margin: 0px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: rgb(47, 79, 79);
+}
+// 内容区域宽度
+// 修改成你期望的宽度
+$content-desktop = 800px
+// 当视窗超过 1600px 后的宽度
+$content-desktop-large = 1000px
+// 超链接样式修改
+// 超链接样式
+.post-body p a {
+    //color: rgb(32, 178, 170);
+    text-decoration: underline;
+    border-bottom: none;
+    &:hover {
+      color: rgb(30, 144, 255);
+      text-decoration: underline;
+    }
+}
+.posts-expand .post-meta a, .post-copyright a {
+    border-bottom: none;
+    &:hover {
+      color: rgb(30, 144, 255);
+      text-decoration: underline;
+    }
+}
+a {
+    border-bottom-color: rgb(80, 115, 184);
+}
+a:hover {
+    color: rgb(30, 144, 255);
+    border-bottom-color: rgb(30, 144, 255);
+}
+
+// 十二生肖
+.chinese-zodiac {
+    float: right;
+}
+@font-face {
+  font-family: 'chinese-zodiac';
+  font-display: swap;
+  src: url(/Blog/fonts/chinese-zodiac.eot);
+  src: url(/Blog/fonts/chinese-zodiac.eot) format('embedded-opentype'),
+       url(/Blog/fonts/chinese-zodiac.woff2) format('woff2'),
+       url(/Blog/fonts/chinese-zodiac.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+.symbolic-animals {
+  display: inline-block;
+  font: normal normal normal 14px/1 chinese-zodiac;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-dragon:before { content: '\e806'; }
+.icon-tiger:before { content: '\e809'; }
+.icon-pig:before { content: '\e810'; }
+.icon-horse:before { content: '\e813'; }
+.icon-rat:before { content: '\e816'; }
+.icon-goat:before { content: '\e818'; }
+.icon-snake:before { content: '\e820'; }
+.icon-ox:before { content: '\e822'; }
+.icon-dog:before { content: '\e825'; }
+.icon-rabbit:before { content: '\e826'; }
+.icon-monkey:before { content: '\e829'; }
+.icon-rooster:before { content: '\e82f'; }
+
+// 图片居中
+.img-caption {
+    font-style: normal;
+    margin: 0 0 .7em;
+    font-size: 90%;
+    color: #555;
+    display: block;
+    text-align: center;
+    text-indent: 0;
+    font-family: STKaiti, serif;
+}
+// 字体颜色
+.post-body {
+    color: #333;
+}
+// pwa显示更新
+.app-refresh {
+    background: #000;
+    height: 0;
+    line-height: 3em;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 42;
+    padding: 0 1em;
+    transition: all .3s ease;
+}
+.app-refresh-wrap {
+    display: flex;
+    color: #fff;
+}
+.app-refresh-wrap label {
+    flex: 1;
+}
+.app-refresh-show {
+    height: 3em;
+}
+// 表格
+table {
+    width: 100%; /*表格宽度*/
+    max-width: 65em; /*表格最大宽度，避免表格过宽*/
+    border: 1px solid #dedede; /*表格外边框设置*/
+    margin: 15px auto; /*外边距*/
+    border-collapse: collapse; /*使用单一线条的边框*/
+    empty-cells: show; /*单元格无内容依旧绘制边框*/
+}
+table th {
+    font-weight: bold; /*加粗*/
+    text-align: center !important; /*内容居中，加上 !important 避免被 Markdown 样式覆盖*/
+    white-space: nowrap; /*表头内容强制在一行显示*/
+    background: rgba(158,188,226,0.2); /*背景色*/
+}
+table td {
+  height: 35px; /*统一每一行的默认高度*/
+  border: 1px solid #dedede; /*内部边框样式*/
+  padding: 0 10px; /*内边距*/
+}
+table td:nth-child(1) {
+    white-space: nowrap; /*首列不换行*/
+}
+//侧栏图片及内部文字颜色修改
+.sidebar {
+            //background:url(图片链接);
+            //background-size: cover;
+            //background-position:center;
+            //background-repeat:no-repeat;
+            /* 修改为白底黑字效果 */
+            background-color: #FFF;
+            p,span,a {color: rgb(85, 85, 85);}
+            p:hover,span:hover,a:hover {color: rgb(0, 0, 77); font-weight:bold; border-bottom-color: rgb(0, 0, 77);}
+            
+}
+// 侧边栏返回顶部按钮鼠标悬浮样式
+.back-to-top {
+  background-color: #222;
+  color: rgb(85, 85, 85);
+}
+.back-to-top:hover{
+  color: rgb(0, 0, 77);
+}
+
+// 导航栏底部百分比透明
+.back-to-top,
+.back-to-top:hover
+{
+	background: rgba(255, 255, 255, 0);
+}
+//侧边滚动条
+/*更好的侧边滚动条*/
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+}
+::-webkit-scrollbar-button:start:increment,::-webkit-scrollbar-button:end:decrement {
+  display: none;
+}
+::-webkit-scrollbar-corner {
+  display: block;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: rgba(0,0,0,.2);
+}
+::-webkit-scrollbar-thumb:hover {
+  border-radius: 8px;
+  background-color: rgba(0,0,0,.5);
+}
+::-webkit-scrollbar-track,::-webkit-scrollbar-thumb {
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
+}
+::-webkit-scrollbar-track:hover {
+  background-color: rgba(0,0,0,.15);
+}
+::-webkit-scrollbar-button:start {
+  width: 10px;
+  height: 10px;
+  /*background: url(../images/scrollbar_arrow.png) no-repeat 0 0;*/  /*可以添加滚动条样式*/
+}
+
+//有序标签美化，ol-li样式修改，可能存在其他位置做了配置，需要修改
+* 有序图标设置 */
+/*
+.posts-expand .post-body ol {
+  padding-left: 0;
+  font-size: 15px;
+  margin-top: .4rem;
+  list-style: none;
+  counter-reset: ol-li;
+}
+
+.posts-expand .post-body ol li:before {
+  display: block;
+  float: left;
+  width: 17px;
+  height: 17px;
+  line-height: 16px;
+  margin: .5rem .5rem 0 0;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  font-style: normal;
+  background-color: #49b1f5;
+  border-radius: 50%;
+  text-align: center;
+  content: counter(ol);
+  counter-increment: ol;
+  transition: all .5s;
+}
+
+.posts-expand .post-body ol li:hover::before {
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+}
+*/
+
+.post-body p{
+    margin: 0;
+}
+
+/* 有序图标设置 */
+.posts-expand ol {
+  counter-reset: sectioncounter
+}
+
+.posts-expand ol > li {
+  margin-top: .4rem;
+  list-style: none;
+  line-height: 30px;
+}
+
+.posts-expand ol > li:before {
+  display: block;
+  float: left;
+  width: 17px;
+  height: 17px;
+  line-height: 16px;
+  margin: 0.42rem 0.42rem 0 0;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  font-style: normal;
+  background-color: #49b1f5;
+  border-radius: 50%;
+  text-align: center;
+  content: '' counter(sectioncounter) '';
+  counter-increment: sectioncounter;
+  transition: all .5s;
+}
+
+.posts-expand ol li:hover::before {
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+}
+
+#footnotelist ol > li:before{
+  background-color: #fff;
+}
+
+//时钟
+.clock {
+  text-align: center;
+  margin-top: 10px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;  
+}
